@@ -16,14 +16,16 @@
   justify-content: space-between;
 }
 
-.user-icon {
-  font-size: 42px;
-  color: #e44f4f;
+.user-icon,
+.notif-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
 
 .notif-icon {
-  font-size: 28px;
-  color: #c92222;
+  width: 28px;
+  height: 28px;
 }
 
 .user-info {
@@ -96,7 +98,7 @@
   height: 45px;
   text-transform: none;
   letter-spacing: 0.3px;
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  /*box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);*/
 }
 
 .next-button:hover {

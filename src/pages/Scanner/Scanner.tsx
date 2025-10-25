@@ -19,14 +19,14 @@ const Scanner: React.FC = () => {
       <IonHeader>
         <IonToolbar className="scanner-header">
           <div className="header-top">
-            <IonIcon icon={personCircleOutline} className="user-icon" />
+            <IonImg src="/assets/user-icon.png" className="user-icon" alt="Usuario" />
             <div className="user-info">
               <IonText className="welcome-text">HOLA HANNIA</IonText>
               <IonText className="sub-text">
                 Último ingreso: 14-10-2025 22:30:01 Vía Móvil
               </IonText>
             </div>
-            <IonIcon icon={notificationsOutline} className="notif-icon" />
+            <IonImg src="/assets/notif-icon.png" className="notif-icon" alt="Notificaciones" />
           </div>
         </IonToolbar>
       </IonHeader>
