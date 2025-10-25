@@ -1,0 +1,40 @@
+/* ===== HEADER (recuadro rojo y logo centrado) ===== */
+.bn-toolbar {
+  --background: var(--bn-red) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bn-red) !important;
+  padding: 12px 0;
+  box-shadow: none;
+  border: none;
+  position: relative;
+  z-index: 10;
+}
+
+/* Quita sombras internas que pone Ionic */
+ion-header::after,
+ion-toolbar::after {
+  background: transparent !important;
+  content: none !important;
+}
+
+/* Contenedor del logo */
+.bn-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 0 0 auto; /* evita que flex lo encoja */
+}
+
+/* Tamaño del logo controlado por prop (logoHeight),
+   pero mantenemos salvaguardas responsivas */
+.bn-brand img {
+  width: auto;
+  max-width: 80vw;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+}

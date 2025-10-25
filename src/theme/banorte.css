@@ -1,0 +1,47 @@
+/* Botón primario */
+.bn-btn-primary {
+  --background: var(--bn-red);
+  --background-hover: var(--bn-red-hover);
+  --color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 28px;
+  padding: 12px 30px;
+}
+
+/* Inputs (para futuros formularios) */
+.bn-input-item {
+  --background: var(--bn-bg);
+  --border-radius: 5px;
+  --border-color: var(--bn-gray-300);
+  --border-width: 1px;
+  --border-style: solid;
+  --min-height: 50px;
+  margin-bottom: 12px;
+}
+.bn-input-item ion-label { font-size: 12px; color: var(--bn-gray-600); }
+.bn-input { --padding-start: 15px; --padding-end: 15px; color: var(--bn-gray-900); font-size: 15px; }
+.bn-input::part(placeholder) { color: var(--bn-gray-600); }
+.bn-input-item.error { --border-color: var(--bn-red); }
+.bn-input-error { color: var(--bn-red); font-size: 12px; margin-top: -6px; margin-bottom: 12px; }
+
+/* Chips */
+.bn-chip {
+  background: #fff;
+  border-radius: 999px;
+  border: 1px solid var(--bn-gray-300);
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--bn-gray-900);
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+/* Card helper */
+.bn-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}

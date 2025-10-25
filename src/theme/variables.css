@@ -1,2 +1,29 @@
-/* For information on how to create your own theme, please see:
-http://ionicframework.com/docs/theming/ */
+:root {
+  /* Banorte */
+  --bn-red: #eb0029;
+  --bn-red-hover: #db0026;
+  --bn-gray-900: #323e48;
+  --bn-gray-600: #5b6670;
+  --bn-gray-400: #c1c5c8;
+  --bn-gray-300: #cfd2d3;
+  --bn-bg: #f6f6f6;
+
+  /* Mapear a Ionic */
+  --ion-color-primary: var(--bn-red);
+  --ion-color-primary-contrast: #ffffff;
+  --ion-text-color: var(--bn-gray-900);
+  --ion-background-color: var(--bn-gray-600);
+
+  /* Toolbar en rojo con texto blanco */
+  --ion-toolbar-background: var(--ion-color-primary);
+  --ion-toolbar-color: #ffffff;
+
+  /* Evita esquema oscuro del sistema */
+  color-scheme: light;
+}
+
+/* Si algo habilita dark, neutraliza */
+html.dark, body.dark, .ion-palette-dark, .ion-color-scheme-dark {
+  --ion-background-color: var(--bn-gray-600) !important;
+  --ion-text-color: var(--bn-gray-900) !important;
+}
