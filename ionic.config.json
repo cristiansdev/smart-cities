@@ -1,0 +1,7 @@
+{
+  "name": "smart-cities",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
