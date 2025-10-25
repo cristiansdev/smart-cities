@@ -96,7 +96,7 @@
   height: 45px;
   text-transform: none;
   letter-spacing: 0.3px;
-  box-shadow: 0 4px 10px rgba(235, 0, 41, 0.3);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .next-button:hover {
