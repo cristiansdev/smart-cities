@@ -7,10 +7,13 @@ import {
   IonText,
   IonImg,
   IonButton,
+  useIonRouter,
 } from "@ionic/react";
 import "./EcoCashPart1.css";
 
 const EcoCashPart1: React.FC = () => {
+
+  const router = useIonRouter();
   return (
     <IonPage>
       <IonHeader>
@@ -76,10 +79,10 @@ const EcoCashPart1: React.FC = () => {
 
             {/* Botones */}
             <div className="ecocash-buttons">
-              <IonButton expand="block" className="btn-principal">
+              <IonButton expand="block" className="btn-principal"  onClick={() => router.push("/descripcion-ecocash", "forward")}>
                 QUIERO SABER MÁS
               </IonButton>
-              <IonButton fill="clear" className="btn-secundario">
+              <IonButton fill="clear"  onClick={() => router.push("/", "forward")} className="btn-secundario">
                 EN OTRO MOMENTO
               </IonButton>
             </div>

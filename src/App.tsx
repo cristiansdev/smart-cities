@@ -47,6 +47,8 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 import PagarServicio from './pages/PagarServicio/PagarServicio';
 import OperacionExitosa from './pages/OperacionExitosa/OperacionExitosa';
+import DescripcionEcocash from './pages/DescripcionEcocash/DescripcionEcocash';
+import TerminosCondiciones from './pages/TerminosCondiciones';
 
 
 
@@ -65,6 +67,16 @@ const App: React.FC = () => (
                     <Route exact path="/pagar-servicio" component={PagarServicio} />
                                <Route exact path="/pagar-servicio" component={PagarServicio} />
         <Route exact path="/operacion-exitosa" component={OperacionExitosa} />
+                <Route exact path="/descripcion-ecocash" component={DescripcionEcocash} />
+                
+         <Route exact path="/terminos-condiciones">
+            <TerminosCondiciones
+              isOpen={true}
+              onClose={() => window.history.back()}
+              onAccept={() => alert('Términos aceptados ✅')}
+              onDecline={() => alert('Términos rechazados ❌')}
+            />
+          </Route>
 
         {/* Página de pagos */}
           <Route exact path="/payments">
