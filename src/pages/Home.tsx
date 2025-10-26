@@ -6,8 +6,6 @@ import {
   IonCol,
   IonIcon,
   IonText,
-  IonCard,
-  IonCardContent,
   IonButton,
 } from "@ionic/react";
 import {
@@ -19,22 +17,20 @@ import {
   keyOutline,
   alertCircleOutline,
 } from "ionicons/icons";
-import BanorteHeader from "../components/BanorteHeader";   // 🆕
+import BanorteHeader from "../components/BanorteHeader";
 import HeroBanner from "../components/HeroBanner";
 import "./Home.css";
+import { useIonRouter } from '@ionic/react';
 
 export default function Home() {
+  const router = useIonRouter();
   return (
     <IonPage>
       {/* Header rojo desacoplado */}
-      <BanorteHeader
-        logoSrc="/assets/LogoBlanco.png"
-        minHeight={70}
-        logoHeight={52}
-      />
+      <BanorteHeader logoSrc="/assets/LogoBlanco.png" minHeight={70} logoHeight={52} />
 
       <IonContent fullscreen className="bn-content">
-        {/* Hero con la imagen */}
+        {/* Hero con imagen */}
         <HeroBanner
           src="/assets/Imagen-Home-Screen.png"
           height={240}
@@ -42,6 +38,7 @@ export default function Home() {
           pillText="Conoce una nueva funcionalidad en Banorte"
           showBadges={true}
         />
+
         {/* Tarjeta de saludo */}
         <div className="bn-greeting bn-card-g">
           <IonText color="dark">
@@ -50,36 +47,35 @@ export default function Home() {
           </IonText>
         </div>
 
-        {/* Acciones principales */}
+        {/* ===== Acciones principales (tiles custom, sin IonCard) ===== */}
         <IonGrid className="bn-actions">
           <IonRow>
             <IonCol size="4">
-              <IonCard className="bn-action-card bn-orange" button>
-                <IonCardContent>
-                  <IonIcon icon={personCircleOutline} />
-                  <span>Cuenta</span>
-                </IonCardContent>
-              </IonCard>
+              <div role="button" className="bn-quick bn-orange">
+                <div className="bn-quick-ring" />
+                <IonIcon icon={personCircleOutline} />
+                <span>Cuenta</span>
+              </div>
             </IonCol>
+
             <IonCol size="4">
-              <IonCard className="bn-action-card bn-yellow" button>
-                <IonCardContent>
-                  <IonIcon icon={repeatOutline} />
-                  <span>Transferencias</span>
-                </IonCardContent>
-              </IonCard>
+              <div role="button" className="bn-quick bn-yellow">
+                <div className="bn-quick-ring" />
+                <IonIcon icon={repeatOutline} />
+                <span>Transferencias</span>
+              </div>
             </IonCol>
+
             <IonCol size="4">
-              <IonCard
-                className="bn-action-card bn-green"
-                routerLink="/scan"
-                button
+              <div
+                role="button"
+                className="bn-quick bn-green"
+                  onClick={() => router.push('/payments', 'forward')}
               >
-                <IonCardContent>
-                  <IonIcon icon={receiptOutline} />
-                  <span>Pago Servicios</span>
-                </IonCardContent>
-              </IonCard>
+                <div className="bn-quick-ring" />
+                <IonIcon icon={receiptOutline}  />
+                <span>Pago Servicios</span>
+              </div>
             </IonCol>
           </IonRow>
         </IonGrid>
@@ -115,6 +111,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        
       </IonContent>
     </IonPage>
   );

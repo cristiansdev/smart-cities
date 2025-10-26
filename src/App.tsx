@@ -24,6 +24,7 @@ import './theme/variables.css';
 import './theme/banorte.css';
 import Scan from './pages/Scan';
 import ServiceConfirm from './pages/ServiceConfirm';
+import Payments from './pages/Payments';
 
 setupIonicReact();
 
@@ -36,6 +37,11 @@ const App: React.FC = () => (
           <Route path="/scan" component={Scan} exact />
           
         <Route exact path="/servicios/confirm" component={ServiceConfirm} />
+
+        {/* Página de pagos */}
+          <Route exact path="/payments">
+            <Payments />
+          </Route>
         <Redirect to="/" />
       </IonRouterOutlet>
     </IonReactRouter>

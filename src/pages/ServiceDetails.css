@@ -1,0 +1,164 @@
+/* ServiceDetails.css - Versión Simplificada para el Modal */
+.service-details-header {
+  --background: var(--banorte-white);
+  --border-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-details-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+}
+
+.back-button {
+  --color: var(--banorte-red);
+  --background: transparent;
+  font-family: 'Gotham Medium', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  min-width: 72px;
+}
+
+.back-button ion-icon {
+  font-size: 20px;
+}
+
+.service-details-header .header-title {
+  font-family: 'Gotham Medium', sans-serif;
+  font-size: 18px;
+  color: var(--banorte-gray-dark);
+  text-align: center;
+  flex: 1;
+  font-weight: 500;
+}
+
+.service-details-content {
+  --background: var(--banorte-white);
+  padding: 20px;
+}
+
+/* Sección de referencia del modal */
+.reference-modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.reference-header {
+  text-align: center;
+}
+
+.reference-title {
+  font-family: 'Gotham Medium', sans-serif;
+  font-size: 18px;
+  color: var(--banorte-gray-dark);
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.reference-input-section {
+  width: 100%;
+}
+
+.reference-input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid var(--banorte-border);
+  border-radius: 12px;
+  font-family: 'Gotham Book', sans-serif;
+  font-size: 16px;
+  color: var(--banorte-gray-dark);
+  background: var(--banorte-white);
+  transition: all 0.3s ease;
+}
+
+.reference-input:focus {
+  outline: none;
+  border-color: var(--banorte-red);
+  box-shadow: 0 0 0 3px rgba(235, 0, 41, 0.1);
+}
+
+.reference-input::placeholder {
+  color: var(--banorte-gray-light);
+  font-family: 'Gotham Book', sans-serif;
+}
+
+.help-link-section {
+  text-align: center;
+}
+
+.help-link {
+  color: var(--banorte-red);
+  text-decoration: none;
+  font-family: 'Gotham Book', sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.help-link:hover {
+  text-decoration: underline;
+}
+
+.continue-button-section {
+  width: 100%;
+}
+
+.continue-btn {
+  width: 100%;
+  background: var(--banorte-red);
+  color: var(--banorte-white);
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: 'Gotham Medium', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.continue-btn:hover {
+  background: var(--banorte-red-hover);
+  transform: translateY(-1px);
+}
+
+.continue-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 320px) {
+  .service-details-header .header-content {
+    padding: 0 12px;
+  }
+  
+  .service-details-content {
+    padding: 16px;
+  }
+  
+  .reference-modal-section {
+    gap: 20px;
+    padding-top: 16px;
+  }
+  
+  .reference-title {
+    font-size: 16px;
+  }
+  
+  .reference-input {
+    padding: 14px;
+    font-size: 14px;
+  }
+  
+  .continue-btn {
+    padding: 14px;
+    font-size: 15px;
+  }
+}

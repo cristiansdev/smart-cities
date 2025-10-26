@@ -1,0 +1,164 @@
+/* ======= Modal base (reduce fondo oscuro y redondea) ======= */
+.ss-modal {
+  /* Backdrop más sutil (no cubre con gris opaco) */
+  --backdrop-opacity: 0.35;
+  --backdrop-background: rgba(10, 16, 20, 0.75);
+
+  /* Tamaño y radios generales del contenedor del modal */
+  --border-radius: 20px;
+  --box-shadow: 0 20px 50px rgba(16, 24, 40, 0.18);
+}
+
+.ss-modal::part(content) {
+  background: transparent; /* dejamos transparente; la tarjeta es la que es blanca */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: env(safe-area-inset-bottom) 12px 12px;
+}
+
+/* ======= Tarjeta interna ======= */
+.ss-card {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  color: #1e2937;
+  border-radius: 20px;
+  padding: 18px 16px 18px;
+  box-shadow: 0 12px 30px rgba(16, 24, 40, 0.18);
+}
+
+/* Grabber (pastilla superior) */
+.ss-grabber {
+  width: 72px;
+  height: 6px;
+  border-radius: 999px;
+  background: #d9dfe6;
+  margin: 6px auto 14px;
+}
+
+/* Header con logo + título */
+.ss-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.ss-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.ss-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ss-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #2a313a;
+  letter-spacing: 0.2px;
+}
+
+.ss-sub {
+  margin: 0;
+  font-size: 14px;
+  color: #4f5b66;
+}
+
+/* ======= Input + icono cámara ======= */
+.ss-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ss-input {
+  flex: 1;
+  height: 52px;
+  border-radius: 16px;
+  padding: 0 16px;
+  border: 2px solid #e4e8ee;
+  font-size: 16px;
+  outline: none;
+  background: #fff;
+  color: #1f2937;
+}
+
+.ss-input:focus {
+  border-color: #e1002a;
+  box-shadow: 0 0 0 3px rgba(225, 0, 42, 0.12);
+}
+
+.ss-input-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: 2px solid #e4e8ee;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.08s ease, background 0.12s ease;
+  color: #303a44;
+}
+
+.ss-input-icon:hover {
+  background: #f6f8fb;
+}
+
+.ss-input-icon:active {
+  transform: scale(0.98);
+}
+
+.ss-input-icon.is-busy {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ======= Enlace de ayuda ======= */
+.ss-help {
+  margin: 10px 0 8px;
+  color: #e1002a;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* ======= CTA ======= */
+.ss-cta {
+  margin-top: 6px;
+  width: 100%;
+  height: 56px;
+  border-radius: 28px;
+  border: none;
+  color: #fff;
+  background: #e1002a;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 20px rgba(225, 0, 42, 0.24);
+}
+
+.ss-cta:disabled {
+  opacity: 0.45;
+  box-shadow: none;
+}
+
+/* ======= Responsivo ======= */
+@media (min-width: 768px) {
+  .ss-card {
+    padding: 22px 20px 22px;
+  }
+  .ss-title { font-size: 22px; }
+  .ss-sub { font-size: 15px; }
+}
