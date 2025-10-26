@@ -1,0 +1,120 @@
+/* Fuente global */
+* {
+  font-family: "Gotham", sans-serif !important;
+}
+
+.ecocash-content {
+  --background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ecocash-container {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.ecocash-header {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.banorte-logo {
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+}
+
+.ecocash-body {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecocash-greeting {
+  display: inline-block;
+  background-color: #7ed957;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 8px 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.ecocash-message {
+  display: block;
+  color: #333;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.ecocash-description {
+  display: block;
+  color: #333;
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.eco-color {
+  color: #6cc04a;
+  font-weight: bold;
+}
+
+.ecocash-icon-container {
+  margin: 25px auto 10px;
+}
+
+.ecocash-icon {
+  width: 85px;
+  height: 85px;
+}
+
+.ecocash-note {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ecocash-buttons {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+}
+
+.btn-principal {
+  --background: #7ed957;
+  --color: #fff;
+  --border-radius: 25px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.btn-secundario {
+  color: #6cc04a;
+  text-transform: none;
+  border: 3px solid #6cc04a;
+  border-radius: 25px;
+  width: 100%;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+}
