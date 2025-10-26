@@ -126,6 +126,22 @@
   --handle-background-checked: white;
 }
 
+.next-button-servicios {
+  --background: #eb0029;
+  --background-hover: #db0026;
+  --color: #fff;
+  --border-radius: 25px;
+  font-family: "Gotham Medium", sans-serif;
+  font-size: 15px;
+  width: 95%;
+  height: 45px;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  margin-top: 20%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 
 /* Responsivo */
 @media (max-width: 600px) {

@@ -9,12 +9,19 @@ import {
   IonCard,
   IonToggle,
   IonIcon,
+  IonButton,
 } from "@ionic/react";
-import "./PagarServicio.css";
 import { chevronBackOutline } from "ionicons/icons";
-
+import { useHistory } from "react-router-dom";
+import "./PagarServicio.css";
 
 const PagarServicio: React.FC = () => {
+  const history = useHistory();
+
+  const handleListoClick = () => {
+    history.push("/operacion-exitosa");
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -33,41 +40,51 @@ const PagarServicio: React.FC = () => {
       </IonHeader>
 
       <IonContent className="pagarservicio-content" fullscreen>
-      <div className="pagarservicio-container">
-        <div className="payment-info">
-          <IonText className="payment-title">
-            <IonIcon icon={chevronBackOutline} className="back-icon" />
-            Pagar Servicio
-          </IonText>
-          <IonText className="payment-label">Monto a pagar</IonText>
-          <IonText className="payment-amount">$300.00 MXN</IonText>
-          <IonText className="payment-note">
-            Esta cantidad debe coincidir con tu recibo y no puedes cambiarla.
-          </IonText>
+        <div className="pagarservicio-container">
+          <div className="payment-info">
+            <IonText className="payment-title">
+              <IonIcon icon={chevronBackOutline} className="back-icon" />
+              Pagar Servicio
+            </IonText>
+            <IonText className="payment-label">Monto a pagar</IonText>
+            <IonText className="payment-amount">$300.00 MXN</IonText>
+            <IonText className="payment-note">
+              Esta cantidad debe coincidir con tu recibo y no puedes cambiarla.
+            </IonText>
+          </div>
+
+          <IonCard className="service-card-first">
+            <div className="service-header">
+              <img src="/assets/cfe-logo.png" alt="CFE" className="cfe-logo" />
+              <div>
+                <IonText className="service-name">CFE</IonText>
+                <IonText className="service-ref">
+                  Referencia: 4140930400184
+                </IonText>
+              </div>
+            </div>
+          </IonCard>
+
+          <IonCard className="service-card">
+            <div className="save-service">
+              <IonText className="save-label">Guardar Servicio</IonText>
+              <IonToggle className="toggle-rojo" checked={false} />
+            </div>
+            <IonText className="save-note">
+              Guárdalo y haz más rápido tus próximos pagos.
+            </IonText>
+          </IonCard>
         </div>
 
-        <IonCard className="service-card-first">
-          <div className="service-header">
-            <img src="/assets/cfe-logo.png" alt="CFE" className="cfe-logo" />
-            <div>
-              <IonText className="service-name">CFE</IonText>
-              <IonText className="service-ref">Referencia: 4140930400184</IonText>
-            </div>
-          </div>
-        </IonCard>
-
-        <IonCard className="service-card">
-          <div className="save-service">
-            <IonText className="save-label">Guardar Servicio</IonText>
-            <IonToggle className="toggle-rojo" checked={false} />
-          </div>
-          <IonText className="save-note">
-            Guárdalo y haz más rápido tus próximos pagos.
-          </IonText>
-        </IonCard>
-      </div>
-    </IonContent>
-
+        {/* Botón que redirige */}
+        <IonButton
+          expand="block"
+          className="next-button-servicios"
+          onClick={handleListoClick}
+        >
+          Listo
+        </IonButton>
+      </IonContent>
     </IonPage>
   );
 };
