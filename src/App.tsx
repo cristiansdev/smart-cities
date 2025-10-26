@@ -5,6 +5,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import Scanner from './pages/Scanner/Scanner';
 import PagarServicio from './pages/PagarServicio/PagarServicio';
+import OperacionExitosa from './pages/OperacionExitosa/OperacionExitosa';
 
 /* Ionic Core CSS */
 import '@ionic/react/css/core.css';
@@ -40,6 +41,7 @@ const App: React.FC = () => (
         <Route exact path="/" render={() => <Redirect to="/home" />} />
         <Route exact path="/scanner" component={Scanner} />
         <Route exact path="/pagar-servicio" component={PagarServicio} />
+        <Route exact path="/operacion-exitosa" component={OperacionExitosa} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
