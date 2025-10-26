@@ -4,12 +4,10 @@ import {
   IonHeader,
   IonToolbar,
   IonContent,
-  IonIcon,
   IonText,
   IonButton,
   IonImg,
 } from "@ionic/react";
-import { personCircleOutline, notificationsOutline } from "ionicons/icons";
 import "./Scanner.css";
 
 const Scanner: React.FC = () => {
@@ -33,21 +31,41 @@ const Scanner: React.FC = () => {
 
       {/* Contenido principal */}
       <IonContent className="scanner-content" fullscreen>
-        <IonText className="scanner-title">
-          <h2>Escanea tu código QR</h2>
-        </IonText>
+        <div className="custom-buttons">
+          <IonButton className="button-white">
+            <IonImg src="/assets/transferencia-icon.png" alt="Icono 1" className="btn-img" />
+          </IonButton>
 
-        <div className="qr-frame">
-          <IonImg
-            src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Ejemplo"
-            alt="QR"
-            className="qr-img"
-          />
+          <IonButton className="button-white">
+            <IonImg src="/assets/retirar-dinero-icon.png" alt="Icono 2" className="btn-img" />
+          </IonButton>
+
+          <IonButton className="button-gray">
+            <IonImg src="/assets/pagos-servicios-icon.png" alt="Icono 3" className="btn-img" />
+          </IonButton>
+
+          <IonButton className="button-white">
+            <IonImg src="/assets/token-icon.png" alt="Icono 4" className="btn-img" />
+          </IonButton>
         </div>
 
-        <IonButton expand="block" className="next-button">
-          <IonText>Continuar</IonText>
-        </IonButton>
+        <div className="scanner-main">
+          <IonText className="scanner-title">
+            <h2>Escanea tu código QR</h2>
+          </IonText>
+
+          <div className="qr-frame">
+            <IonImg
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Ejemplo"
+              alt="QR"
+              className="qr-img"
+            />
+          </div>
+
+          <IonButton expand="block" className="next-button">
+            Continuar
+          </IonButton>
+        </div>
       </IonContent>
     </IonPage>
   );

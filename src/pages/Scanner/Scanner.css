@@ -1,16 +1,12 @@
 @import url("https://fonts.cdnfonts.com/css/gotham");
 
 /* ======== HEADER ======== */
-.scanner-header {
-  background-color: #e60c0c;
+.header-top {
+  background-color: #db0000;
   border-radius: 0 0 20px 20px;
   padding: 14px 20px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   font-family: "Gotham Medium", sans-serif;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,14 +14,9 @@
 
 .user-icon,
 .notif-icon {
-  width: 42px;
-  height: 42px;
+  width: 80px;
+  height: 60px;
   object-fit: contain;
-}
-
-.notif-icon {
-  width: 28px;
-  height: 28px;
 }
 
 .user-info {
@@ -51,70 +42,143 @@
 
 /* ======== CONTENIDO ======== */
 .scanner-content {
-  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.scanner-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .scanner-title h2 {
-  font-family: "Gotham Medium", sans-serif;
-  font-size: 18px;
-  color: #323e48;
-  margin-top: 10px;
-  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0px;
 }
 
-/* Marco QR */
 .qr-frame {
-  width: 260px;
-  height: 260px;
+  width: 60vw;
+  max-width: 260px;
+  height: 60vw;
+  max-height: 260px;
   border-radius: 25px;
-  background: #ffffff;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  box-shadow: 6px 6px 16px rgba(46, 44, 44, 0.08);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 35px;
+  margin-top: 60px;
+  padding: 1%;
 }
 
 .qr-img {
-  width: 200px;
-  height: 200px;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
 }
 
-/* Botón Banorte */
 .next-button {
   --background: #eb0029;
   --background-hover: #db0026;
-  --color: #ffffff;
+  --color: #fff;
   --border-radius: 25px;
   font-family: "Gotham Medium", sans-serif;
   font-size: 15px;
-  width: 80%;
+  width: 70%;
   max-width: 300px;
   height: 45px;
   text-transform: none;
   letter-spacing: 0.3px;
-  /*box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);*/
+  margin-top: 15%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .next-button:hover {
-  filter: brightness(0.95);
-  transform: scale(1.02);
-  transition: all 0.2s ease-in-out;
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== BOTONES ======== */
+.custom-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: auto;
+  gap: 3px;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+.button-white,
+.button-gray {
+  min-width: 90px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  --border-radius: 20px;
+}
+
+.button-white {
+  --background: #ffffff;
+  --border-color: #cecdc9;
+  --border-width: 1px;
+  width: 100px;
+}
+
+.button-gray {
+  --background: #5b6670;
+}
+
+.btn-img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
 /* ======== RESPONSIVE ======== */
+@media (max-width: 600px) {
+  .custom-buttons {
+    justify-content: flex-start;
+  }
+
+  .button-white,
+  .button-gray {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn-img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .scanner-title h2 {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 768px) {
   .qr-frame {
-    width: 300px;
+    width: 200px;
     height: 300px;
   }
+
   .qr-img {
-    width: 230px;
+    width: 200px;
     height: 230px;
   }
 }
