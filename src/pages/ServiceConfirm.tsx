@@ -6,6 +6,7 @@ import {
   IonContent,
   IonToggle,
   IonButton,
+  useIonRouter,
 } from "@ionic/react";
 import { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
@@ -50,7 +51,7 @@ export default function ServiceConfirm() {
   }, [rawAmount]);
 
   const [saveService, setSaveService] = useState(false);
-
+  const router = useIonRouter();
   return (
     <IonPage>
       <IonHeader>
@@ -145,7 +146,8 @@ export default function ServiceConfirm() {
             style={{ marginTop: 18, height: 54, borderRadius: 20, fontSize: 18 }}
             onClick={() => {
               // Aquí integrarías el flujo de pago real
-              console.log("Pagar ->", { ref, amount, dueISO, saveService });
+               router.push("/operacion-exitosa");
+              //console.log("Pagar ->", { ref, amount, dueISO, saveService });
             }}
           >
             Pagar

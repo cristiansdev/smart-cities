@@ -16,28 +16,44 @@ import {
   cardOutline,
   keyOutline,
   alertCircleOutline,
+  leafOutline,
 } from "ionicons/icons";
 import BanorteHeader from "../components/BanorteHeader";
 import HeroBanner from "../components/HeroBanner";
 import "./Home.css";
-import { useIonRouter } from '@ionic/react';
+import { useIonRouter } from "@ionic/react";
 
 export default function Home() {
   const router = useIonRouter();
+
   return (
     <IonPage>
       {/* Header rojo desacoplado */}
-      <BanorteHeader logoSrc="/assets/LogoBlanco.png" minHeight={70} logoHeight={52} />
+      <BanorteHeader
+        logoSrc="/assets/LogoBlanco.png"
+        minHeight={70}
+        logoHeight={52}
+      />
 
       <IonContent fullscreen className="bn-content">
         {/* Hero con imagen */}
-        <HeroBanner
-          src="/assets/Imagen-Home-Screen.png"
-          height={240}
-          objectPosition="center top"
-          pillText="Conoce una nueva funcionalidad en Banorte"
-          showBadges={true}
-        />
+        <div className="bn-hero-wrapper">
+          <HeroBanner
+            src="/assets/Imagen-Home-Screen.png"
+            height={240}
+            objectPosition="center top"
+            pillText="Conoce una nueva funcionalidad en Banorte"
+            showBadges={true}
+          />
+
+          {/* Botón verde flotante */}
+          <button
+            className="bn-floating-btn"
+            onClick={() => router.push("/eco-cash-part-1", "forward")}
+          >
+            <IonIcon icon={leafOutline} />
+          </button>
+        </div>
 
         {/* Tarjeta de saludo */}
         <div className="bn-greeting bn-card-g">
@@ -47,7 +63,7 @@ export default function Home() {
           </IonText>
         </div>
 
-        {/* ===== Acciones principales (tiles custom, sin IonCard) ===== */}
+        {/* Acciones principales */}
         <IonGrid className="bn-actions">
           <IonRow>
             <IonCol size="4">
@@ -70,10 +86,10 @@ export default function Home() {
               <div
                 role="button"
                 className="bn-quick bn-green"
-                  onClick={() => router.push('/payments', 'forward')}
+                onClick={() => router.push("/payments", "forward")}
               >
                 <div className="bn-quick-ring" />
-                <IonIcon icon={receiptOutline}  />
+                <IonIcon icon={receiptOutline} />
                 <span>Pago Servicios</span>
               </div>
             </IonCol>
@@ -111,8 +127,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        
       </IonContent>
     </IonPage>
   );

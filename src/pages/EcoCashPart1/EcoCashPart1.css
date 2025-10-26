@@ -1,0 +1,176 @@
+/* Fuente global */
+* {
+  font-family: "Gotham", sans-serif !important;
+}
+
+/* Evitar que todo el contenido se centre verticalmente (causaba el “salto”) */
+.ecocash-content {
+  --background: #ffffff;
+}
+
+/* Contenedor: ancho fijo tipo mobile y centrado horizontal */
+.ecocash-container {
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Top bar (ya lo tenías, conservamos) */
+.pagarservicio-header {
+  --background: var(--bn-red);
+  border-bottom: 0; 
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+}
+
+.user-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  flex: 1;
+  min-width: 0;
+}
+
+.welcome-text {
+  font-weight: 700;
+  color: #d9d9d9;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.sub-text {
+  color:  #d9d9d9;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notif-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Encabezado Banorte */
+.ecocash-header {
+  padding-top: 22px;
+  padding-bottom: 12px;
+}
+
+.banorte-logo {
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Cuerpo */
+.ecocash-body {
+  padding: 18px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Pill verde */
+.ecocash-greeting {
+  display: inline-block;
+  background-color: #7ed957;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 24px;
+  padding: 8px 20px;
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 16px;
+  min-width: 200px;    /* ayuda a que no se encoja y mantenga alineación */
+}
+
+/* Textos */
+.ecocash-message {
+  display: block;
+  color: #333;
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.ecocash-description {
+  display: block;
+  color: #333;
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 1.45;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.eco-color {
+  color: #6cc04a;
+  font-weight: 700;
+}
+
+/* Icono */
+.ecocash-icon-container {
+  margin: 22px auto 10px;
+}
+
+.ecocash-icon {
+  width: 88px;
+  height: 88px;
+}
+
+/* Nota */
+.ecocash-note {
+  display: block;
+  font-size: 15.5px;
+  color: #4a4a4a;
+  margin: 8px 0 22px;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 6px; /* evita “brincos” por saltos de línea */
+}
+
+/* Botones */
+.ecocash-buttons {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-principal {
+  --background: #7ed957;
+  --color: #fff;
+  --border-radius: 24px;
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.btn-secundario {
+  color: #6cc04a;
+  text-transform: none;
+  border: 2px solid #6cc04a;
+  border-radius: 24px;
+  width: 100%;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  font-weight: 600;
+}
