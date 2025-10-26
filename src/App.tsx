@@ -36,6 +36,7 @@ import "@ionic/react/css/palettes/dark.system.css";
 
 /* Theme variables */
 import "./theme/variables.css";
+import DescripcionEcocash from "./pages/DescripcionEcocash/DescripcionEcocash";
 
 setupIonicReact();
 
@@ -54,6 +55,7 @@ const App: React.FC = () => (
         <Route exact path="/pagar-servicio" component={PagarServicio} />
         <Route exact path="/operacion-exitosa" component={OperacionExitosa} />
         <Route exact path="/eco-cash-part-1" component={EcoCashPart1} />
+        <Route exact path="/descripcion-ecocash" component={DescripcionEcocash} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>

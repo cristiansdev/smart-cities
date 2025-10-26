@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("/assets/fonts/Gotham.woff2") format("woff2"),
+       url("/assets/fonts/Gotham.woff") format("woff");
+  font-display: swap;
+}
+
+* {
+  font-family: "Gotham", sans-serif !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+
+.user-icon,
+.notif-icon {
+  width: 80px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.header-top {
+  background-color: #db0000;
+  border-radius: 0 0 20px 20px;
+  padding: 14px 20px;
+  color: #fff;
+  font-family: "Gotham Medium", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-icon,
+.notif-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.welcome-text {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.welcome-text {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sub-text {
+  font-size: 12px;
+  font-family: "Gotham Book", sans-serif;
+  color: #f0f0f0;
+  margin-top: 2px;
+}
+
+/* CONTENIDO PRINCIPAL */
+.ecocash-page {
+  --background: linear-gradient(180deg, #ffffff 0%, #eafae1 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+/* Animaciones */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sección 1 */
+.section1 {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.ecocash-title {
+  background-color: #7ed957;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: inline-block;
+}
+
+.ecocash-subtitle {
+  color: #333;
+  display: block;
+  font-size: 1.1rem;
+  margin: 15px auto;
+  max-width: 320px;
+}
+
+.ecocash-desc {
+  color: #444;
+  display: block;
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.5;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.ecocash-girl {
+  width: 200px;
+  margin: 25px auto 10px;
+  display: block;
+}
+
+.ecocash-hint {
+  display: block;
+  margin-top: 25px;
+  font-weight: bold;
+  color: #4b4b4b;
+  font-size: 1.2rem;
+}
+
+/* Sección 2 */
+.section2 {
+  background-color: #c9f5a6;
+  text-align: left;
+  padding: 30px 20px 60px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.ecocash-step {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.icon-circle {
+  background-color: #7ed957;
+  color: #fff;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-weight: bold;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.cashback-icon {
+  width: 90px;
+  margin: 30px auto;
+  display: block;
+}
+
+.btn-join {
+  --background: #6cc04a;
+  --border-radius: 25px;
+  --color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+  .ecocash-desc, .ecocash-subtitle {
+    font-size: 1.1rem;
+    max-width: 400px;
+  }
+
+  .cashback-icon {
+    width: 110px;
+  }
+
+  .btn-join {
+    max-width: 300px;
+  }
+}
