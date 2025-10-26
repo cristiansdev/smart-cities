@@ -22,6 +22,8 @@ import '@ionic/react/css/display.css';
 /* Theme */
 import './theme/variables.css';
 import './theme/banorte.css';
+import Scan from './pages/Scan';
+import ServiceConfirm from './pages/ServiceConfirm';
 
 setupIonicReact();
 
@@ -30,6 +32,10 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route exact path="/" component={Home} />
+         {/* Nueva página de escaneo */}
+          <Route path="/scan" component={Scan} exact />
+          
+        <Route exact path="/servicios/confirm" component={ServiceConfirm} />
         <Redirect to="/" />
       </IonRouterOutlet>
     </IonReactRouter>

@@ -72,7 +72,7 @@ export default function Home() {
             <IonCol size="4">
               <IonCard
                 className="bn-action-card bn-green"
-                routerLink="/payments"
+                routerLink="/scan"
                 button
               >
                 <IonCardContent>
