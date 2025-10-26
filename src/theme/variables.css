@@ -1,2 +1,50 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+/* variables.css o en un archivo CSS aparte */
+.custom-tab-bar {
+  --background: #FFFFFF;
+  --border: 1px solid #E0E0E0;
+}
+
+.tab-button {
+  --color: #5B6670;
+  --color-selected: #EB0029;
+}
+
+.tab-icon {
+  font-size: 20px;
+}
+
+.tab-label {
+  font-family: 'Gotham Medium', sans-serif;
+  font-size: 12px;
+  margin-top: 4px;
+}
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+:root {
+  /** primary **/
+  --ion-color-primary: #EB0029;
+  --ion-color-primary-rgb: 235, 0, 41;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #cf0024;
+  --ion-color-primary-tint: #ed1a3e;
+
+  /** background **/
+  --ion-background-color: #F6F6F6;
+  
+  /** card **/
+  --ion-card-background: #FFFFFF;
+}
+
+/* Tipografía global */
+* {
+  font-family: 'Gotham Book', 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gotham Medium', 'Helvetica Neue', Arial, sans-serif;
+}
