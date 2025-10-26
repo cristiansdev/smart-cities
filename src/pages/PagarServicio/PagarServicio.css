@@ -1,0 +1,138 @@
+.pagarservicio-content {
+  font-family: "Gotham";
+
+  --padding-start: 24px;
+  --padding-end: 24px;
+  --padding-top: 24px;
+  --padding-bottom: 24px;
+
+  background-color: #fff;
+}
+
+/* Texto principal */
+.payment-info {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.payment-title {
+  font-size: 18px;
+  color: #555;
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.payment-label {
+  font-size: 13px;
+  color: #888;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.payment-amount {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.payment-note {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Tarjeta CFE */
+.service-card-first {
+  background-color: #f4f2ef;
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: none;
+  font-family: "Gotham", sans-serif;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cfe-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.service-name {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+.service-ref {
+  display: block;
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* Tarjeta guardar servicio */
+.service-card {
+  background: transparent;
+  box-shadow: none;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Gotham", sans-serif;
+}
+
+.save-service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.save-label {
+  font-size: 15px;
+  font-weight: bold;
+  color: #db0000;
+}
+
+.save-note {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.toggle-rojo {
+  --track-background: #ccc;
+  --track-background-checked: #db0000;
+  --handle-background: white;
+  --handle-background-checked: white;
+}
+
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .payment-amount {
+    font-size: 22px;
+  }
+  .service-card-first {
+    padding: 12px;
+  }
+}
